@@ -11,7 +11,7 @@ $(function() {
 	var indicatorOne={
 			leftOffset: $("#nav1").offset().left,
 			width: $("#nav1").width(),
-			color: "#112A60"
+			color: "#FFF"
 		},
 		indicatorTwo={
 			leftOffset: $("#nav2").offset().left,
@@ -88,19 +88,3 @@ $(function() {
     }
   });
 });
-// jQuery(document).ready(function ($)
-
-// $(function() {
-  // $('a[href*="#"]:not([href="#"])').click(function() {
-  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  //     var target = $(this.hash);
-  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-  //     if (target.length) {
-  //       $('html, body').animate({
-  //         scrollTop: target.offset().top
-  //       }, 1000);
-  //       return false;
-  //     }
-  //   }
-  // });
-// });

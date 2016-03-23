@@ -12,7 +12,7 @@ body {
   top: 42px;
   width: 100px;
   height: 8px;
-  background: #112A60;
+  background: #FFF;
   transition: all .5s ease;
 }
 nav.navbar #nav1 a:hover,
