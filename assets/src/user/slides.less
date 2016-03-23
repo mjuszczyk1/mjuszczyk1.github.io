@@ -11,8 +11,10 @@
 		position: relative;
 		.container {
 			padding-top: @navbar-height;
-			position: absolute;
-			bottom: 60%;
+			@media(min-width: @screen-sm-max){
+				position: absolute;
+				bottom: 60%;
+			}
 		}
 		a {
 			color: @black;

@@ -51,8 +51,12 @@ nav.navbar #nav4 a:hover {
 }
 .slide#slide1 .container {
   padding-top: 50px;
-  position: absolute;
-  bottom: 60%;
+}
+@media (min-width: 991px) {
+  .slide#slide1 .container {
+    position: absolute;
+    bottom: 60%;
+  }
 }
 .slide#slide1 a {
   color: #000;
