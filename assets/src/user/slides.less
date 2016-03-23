@@ -1,0 +1,67 @@
+.slide {
+	// Backgrounds
+	&#slide1 {
+		// background: @color-one;
+		background-image: url('../../dist/img/header.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: 150%;
+		background-attachment: fixed;
+		height: 80vh;
+		.container {
+			padding-top: @navbar-height;
+		}
+	}
+	&#slide2 {
+		background: @color-two;
+		padding: 25px 0;
+		h1 {
+			color: @white;
+		}
+		img {
+			width: 100%;
+			@media(max-width: @screen-xs-max){
+				max-width: 500px;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+	}
+	&#slide3 {
+		background: @color-three;
+		padding-bottom: 25px;
+		.screenshots {
+			margin-bottom: 25px;
+		}
+		.work-preview {
+			max-width: 100%;
+			-webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+			box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);;
+		}
+		a {
+			color: @color-one;
+			font-weight: 700;
+			&:focus, &:active, &:hover {
+				color: darken(@color-one, 10%);
+			}
+		}
+	}
+	&#slide4 {
+		padding: 25px 0;
+		background: @color-four;
+
+	}
+	&#slide5 {
+		background: @color-one;
+		padding: 25px 0;
+		color: @white;
+		a {
+			color: @white;
+			&:focus, &:active, &:hover {
+				color: darken(@white, 10%)
+			}
+		}
+	}
+}
