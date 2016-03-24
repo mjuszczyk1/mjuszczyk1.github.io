@@ -46,7 +46,17 @@ $(function() {
 		// console.log('scrollPosition: ' + scrollPosition + '; fullScrollPosition: ' + fullScrollPosition + '; totalHeight:' + totalHeight);
 
 		if (fullScrollPosition != totalHeight) {
-			if (scrollPosition < slideTwo){
+			if (scrollPosition >= slideFour - 200){
+				$("#html-sk").css("width", "100%");
+		    	$("#css-sk").css("width", "100%");
+		    	$("#js-sk").css("width", "90%");
+		    	$("#twig-sk").css("width","80%");
+		    	$("#grail-sk").css("width","50%");
+		    	$("#groov-sk").css("width","80%");
+		    	$("#c-sk").css("width","70%");
+				$("#pyth-sk").css("width","50%");
+			}
+			else if (scrollPosition < slideTwo){
 				$("#indicator").css("left",indicatorOne.leftOffset)
 					.css("width",indicatorOne.width)
 					.css("background-color",indicatorOne.color);
@@ -65,6 +75,7 @@ $(function() {
 		    	$("#indicator").css("left",indicatorFour.leftOffset)
 		    		.css("width",indicatorFour.width)
 		    		.css("background-color",indicatorFour.color);
+		    	
 		    }
 		}
 	    else { // (fullScrollPosition == totalHeight)

@@ -14,6 +14,12 @@ body {
   height: 8px;
   background: #FFF;
   transition: all .5s ease;
+  display: none;
+}
+@media (min-width: 767px) {
+  #indicator {
+    display: block;
+  }
 }
 nav.navbar #nav2 a:hover,
 nav.navbar #nav5 a:hover {
@@ -90,6 +96,11 @@ nav.navbar #nav4 a:hover {
   -webkit-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.slide#slide3 .work-preview:hover {
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .slide#slide3 a {
   color: #112A60;
