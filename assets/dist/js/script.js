@@ -46,7 +46,7 @@ $(function() {
 		// console.log('scrollPosition: ' + scrollPosition + '; fullScrollPosition: ' + fullScrollPosition + '; totalHeight:' + totalHeight);
 
 		if (fullScrollPosition != totalHeight) {
-			if (scrollPosition >= slideFour - 200){
+			if (scrollPosition >= slideFour - 200 && !(scrollPosition > slideFour)){
 				$("#html-sk").css("width", "100%");
 		    	$("#css-sk").css("width", "100%");
 		    	$("#js-sk").css("width", "90%");
