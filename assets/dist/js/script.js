@@ -43,46 +43,45 @@ $(function() {
 		// Distance measured from bottom
 		var fullScrollPosition = $(window).height() + scrollPosition;
 
-		// console.log('scrollPosition: ' + scrollPosition + '; fullScrollPosition: ' + fullScrollPosition + '; totalHeight:' + totalHeight);
+		// console.log('scrollPosition: ' + scrollPosition + '; fullScrollPosition: ' + fullScrollPosition + '; totalHeight:' + (slideFour - 50));
 
 		if (fullScrollPosition != totalHeight) {
-			if (scrollPosition >= slideFour - 200 && !(scrollPosition > slideFour)){
-				$("#html-sk").css("width", "100%");
-		    	$("#css-sk").css("width", "100%");
-		    	$("#js-sk").css("width", "90%");
-		    	$("#twig-sk").css("width","80%");
-		    	$("#grail-sk").css("width","50%");
-		    	$("#groov-sk").css("width","80%");
-		    	$("#c-sk").css("width","70%");
-				$("#pyth-sk").css("width","50%");
-			}
-			else if (scrollPosition < slideTwo){
+			if (scrollPosition < slideTwo){
 				$("#indicator").css("left",indicatorOne.leftOffset)
 					.css("width",indicatorOne.width)
 					.css("background-color",indicatorOne.color);
-		    }
-		    else if (scrollPosition >= slideTwo && scrollPosition < slideThree){
-		    	$("#indicator").css("left",indicatorTwo.leftOffset)
-		    		.css("width",indicatorTwo.width)
-		    		.css("background-color",indicatorTwo.color);
-		    }
-		    else if (scrollPosition >= slideThree && scrollPosition < slideFour){
-		    	$("#indicator").css("left",indicatorThree.leftOffset)
-		    		.css("width",indicatorThree.width)
-		    		.css("background-color",indicatorThree.color);
-		    }
-		    else if (scrollPosition >= slideFour && scrollPosition < slideFive){
-		    	$("#indicator").css("left",indicatorFour.leftOffset)
-		    		.css("width",indicatorFour.width)
-		    		.css("background-color",indicatorFour.color);
-		    	
-		    }
+			}
+			else if (scrollPosition < slideThree){
+				$("#indicator").css("left",indicatorTwo.leftOffset)
+					.css("width",indicatorTwo.width)
+					.css("background-color",indicatorTwo.color);
+			}
+			else if (scrollPosition < slideFour){
+				$("#indicator").css("left",indicatorThree.leftOffset)
+					.css("width",indicatorThree.width)
+					.css("background-color",indicatorThree.color);
+				if (scrollPosition > (slideThree * 1.4)){
+					$("#html-sk").css("width", "100%");
+			    	$("#css-sk").css("width", "100%");
+			    	$("#js-sk").css("width", "90%");
+			    	$("#twig-sk").css("width","80%");
+			    	$("#grail-sk").css("width","50%");
+			    	$("#groov-sk").css("width","80%");
+			    	$("#c-sk").css("width","70%");
+					$("#pyth-sk").css("width","50%");
+				}
+			}
+			else if (scrollPosition < slideFive){
+				$("#indicator").css("left",indicatorFour.leftOffset)
+					.css("width",indicatorFour.width)
+					.css("background-color",indicatorFour.color);
+			}
 		}
-	    else { // (fullScrollPosition == totalHeight)
-	    	$("#indicator").css("left",indicatorFive.leftOffset)
-	    		.css("width",indicatorFive.width)
-	    		.css("background-color",indicatorFive.color);;
-	    }
+		else {
+			$("#indicator").css("left",indicatorFive.leftOffset)
+				.css("width",indicatorFive.width)
+				.css("background-color",indicatorFive.color);
+		}
 	})
 });
 $(function() {
