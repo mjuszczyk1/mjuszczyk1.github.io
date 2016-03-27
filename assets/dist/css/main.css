@@ -7,6 +7,9 @@
 body {
   font-family: 'Catamaran', sans-serif;
 }
+#slide2 #name {
+  border-bottom: 4px solid #FFF;
+}
 #indicator {
   position: absolute;
   top: 42px;

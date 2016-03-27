@@ -37,11 +37,20 @@ $(function() {
 	// Set the css of #indicator here, so it shows up correct on load
 	$("#indicator").css("left",indicatorOne.leftOffset).css("width",indicatorOne.width);
 
+	// Set height for mobile indicator
+	$("#mobile-indicator-container").css("height",totalHeight);
+
+	var mobileIndicator=$("#mobile-indicator");
+
 	$(window).scroll(function(){
 		// Distance meseaured from top
 		var scrollPosition = window.scrollY;
 		// Distance measured from bottom
 		var fullScrollPosition = $(window).height() + scrollPosition;
+
+		var percentScroll = (fullScrollPosition/totalHeight*100).toString() + '%';
+		// console.log(percentScroll);
+		mobileIndicator.css("height",percentScroll);
 
 		// console.log('scrollPosition: ' + scrollPosition + '; fullScrollPosition: ' + fullScrollPosition + '; totalHeight:' + (slideFour - 50));
 
