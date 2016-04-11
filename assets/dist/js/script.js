@@ -47,7 +47,7 @@ $(function() {
 		// Distance measured from bottom
 		var fullScrollPosition = $(window).scrollTop() + $(window).height();
 
-		var percentScroll = (fullScrollPosition/(totalHeight*100));
+		var percentScroll = ((fullScrollPosition/totalHeight)*100);
 		// mobileIndicator.css("width",(percentScroll.toString() + '%'));
 		// This just kinda seems weird on mobile
 		// since the load progress bar is in same spot
