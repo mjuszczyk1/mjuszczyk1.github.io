@@ -1,5 +1,5 @@
 // Navbar indicator slider
-$(function() {
+$( document ).ready(function() {
 	// Set offsets of slides
 	var navHeight=$("nav.navbar").height();
 	var slideOne=$(".slide#slide1").offset().top - navHeight,
