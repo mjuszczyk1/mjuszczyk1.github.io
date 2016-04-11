@@ -7,7 +7,7 @@ $( document ).ready(function() {
 		slideThree=$(".slide#slide3").offset().top - navHeight,
 		slideFour=$(".slide#slide4").offset().top - navHeight,
 		slideFive=$(".slide#slide5").offset().top - navHeight,
-		totalHeight=$("#body").innerHeight();
+		totalHeight=$("#body").height();
 	var indicatorOne={
 			leftOffset: $("#nav1").offset().left,
 			width: $("#nav1").width(),
