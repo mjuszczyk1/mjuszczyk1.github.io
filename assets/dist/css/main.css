@@ -24,6 +24,14 @@ body {
     display: block;
   }
 }
+#mobile-indicator {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  height: 10px;
+  background: #000;
+  z-index: 999;
+}
 nav.navbar #nav2 a:hover,
 nav.navbar #nav5 a:hover {
   color: #112A60;

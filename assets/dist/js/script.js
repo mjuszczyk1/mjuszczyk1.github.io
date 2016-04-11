@@ -37,24 +37,22 @@ $(function() {
 	// Set the css of #indicator here, so it shows up correct on load
 	$("#indicator").css("left",indicatorOne.leftOffset).css("width",indicatorOne.width);
 
-	// Set height for mobile indicator
-	$("#mobile-indicator-container").css("height",totalHeight);
-
 	var mobileIndicator=$("#mobile-indicator");
+
+	var progressBars=false;
 
 	$(window).scroll(function(){
 		// Distance meseaured from top
 		var scrollPosition = window.scrollY;
 		// Distance measured from bottom
-		var fullScrollPosition = $(window).height() + scrollPosition;
+		var fullScrollPosition = $(window).scrollTop() + $(window).height();
 
-		var percentScroll = (fullScrollPosition/totalHeight*100).toString() + '%';
-		// console.log(percentScroll);
-		mobileIndicator.css("height",percentScroll);
+		var percentScroll = (fullScrollPosition/totalHeight*100);
+		// mobileIndicator.css("width",(percentScroll.toString() + '%'));
+		// This just kinda seems weird on mobile
+		// since the load progress bar is in same spot
 
-		// console.log('scrollPosition: ' + scrollPosition + '; fullScrollPosition: ' + fullScrollPosition + '; totalHeight:' + (slideFour - 50));
-
-		if (fullScrollPosition != totalHeight) {
+		if (percentScroll <= 96) {
 			if (scrollPosition < slideTwo){
 				$("#indicator").css("left",indicatorOne.leftOffset)
 					.css("width",indicatorOne.width)
@@ -78,6 +76,7 @@ $(function() {
 			    	$("#groov-sk").css("width","80%");
 			    	$("#c-sk").css("width","70%");
 					$("#pyth-sk").css("width","50%");
+					progressBars=true;
 				}
 			}
 			else if (scrollPosition < slideFive){
@@ -90,6 +89,16 @@ $(function() {
 			$("#indicator").css("left",indicatorFive.leftOffset)
 				.css("width",indicatorFive.width)
 				.css("background-color",indicatorFive.color);
+			if (!progressBars){
+				$("#html-sk").css("width", "100%");
+		    	$("#css-sk").css("width", "100%");
+		    	$("#js-sk").css("width", "90%");
+		    	$("#twig-sk").css("width","80%");
+		    	$("#grail-sk").css("width","50%");
+		    	$("#groov-sk").css("width","80%");
+		    	$("#c-sk").css("width","70%");
+				$("#pyth-sk").css("width","50%");
+			}
 		}
 	})
 });
