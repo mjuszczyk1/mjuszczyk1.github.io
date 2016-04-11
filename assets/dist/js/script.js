@@ -51,7 +51,7 @@ $(function() {
 		// mobileIndicator.css("width",(percentScroll.toString() + '%'));
 		// This just kinda seems weird on mobile
 		// since the load progress bar is in same spot
-
+		console.log(percentScroll);
 		if (percentScroll <= 96) {
 			if (scrollPosition < slideTwo && scrollPosition > slideOne){
 				$("#indicator").css("left",indicatorOne.leftOffset)
