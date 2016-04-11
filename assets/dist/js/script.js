@@ -53,17 +53,17 @@ $(function() {
 		// since the load progress bar is in same spot
 
 		if (percentScroll <= 96) {
-			if (scrollPosition < slideTwo){
+			if (scrollPosition < slideTwo && scrollPosition > slideOne){
 				$("#indicator").css("left",indicatorOne.leftOffset)
 					.css("width",indicatorOne.width)
 					.css("background-color",indicatorOne.color);
 			}
-			else if (scrollPosition < slideThree){
+			else if (scrollPosition < slideThree && scrollPosition > slideTwo){
 				$("#indicator").css("left",indicatorTwo.leftOffset)
 					.css("width",indicatorTwo.width)
 					.css("background-color",indicatorTwo.color);
 			}
-			else if (scrollPosition < slideFour){
+			else if (scrollPosition < slideFour && scrollPosition > slideThree){
 				$("#indicator").css("left",indicatorThree.leftOffset)
 					.css("width",indicatorThree.width)
 					.css("background-color",indicatorThree.color);
@@ -79,7 +79,7 @@ $(function() {
 					progressBars=true;
 				}
 			}
-			else if (scrollPosition < slideFive){
+			else if (scrollPosition < slideFive && scrollPosition > slideFour){
 				$("#indicator").css("left",indicatorFour.leftOffset)
 					.css("width",indicatorFour.width)
 					.css("background-color",indicatorFour.color);
