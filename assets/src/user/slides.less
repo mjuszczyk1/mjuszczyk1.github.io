@@ -7,8 +7,11 @@
 		background-repeat: no-repeat;
 		background-position-y: 150%;
 		background-attachment: fixed;
-		height: 80vh;
+		min-height: 80vh;
 		position: relative;
+		@media (max-width: @screen-sm-max){
+			height: auto;
+		}
 		.container {
 			padding-top: @navbar-height;
 			@media(min-width: @screen-sm-max){
@@ -16,6 +19,7 @@
 				bottom: 60%;
 				left: 0;
 				right: 0;
+				top:15%;
 			}
 		}
 		a {
