@@ -183,18 +183,20 @@ nav.navbar #nav4 a:hover {
 }
 .slide#slide3 .screenshots .shot .overlay {
   position: absolute;
-  display: none;
-  background: rgba(0, 0, 0, 0);
-  transition: all .4s ease;
-}
-.slide#slide3 .screenshots .shot .overlay.hovered {
+  display: block;
   background: rgba(0, 0, 0, 0.5);
   transition: all .4s ease;
-  display: block;
+  z-index: 1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+.slide#slide3 .screenshots .shot .overlay.hovered {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all .4s ease;
+  display: none;
+  position: initial;
   z-index: 1;
 }
 .slide#slide3 .work-preview {

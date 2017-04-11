@@ -118,25 +118,11 @@ $( document ).ready(function() {
         }
     });
     $('.shot').mouseenter(function() {
-        // var siblings = $(this).children();
-        $(this).siblings().children('div.overlay').addClass('hovered');
+        $(this).children('div.overlay').addClass('hovered');
         $(this).children().children('.work-title').css('bottom', '0');
-        // $(this).children().children('.work-title').css('bottom', '0');
-        // for (var i = 0; i < children.length; i++) {
-        //     children[i].css('display', 'none');
-        // }
     });
     $('.shot').mouseleave(function() {
-        // var siblings = $(this).children();
-        $(this).siblings().children('div.overlay').removeClass('hovered');
+        $(this).children('div.overlay').removeClass('hovered');
         $(this).children().children('.work-title').css('bottom', '-100%');
-        // $(this).siblings().children('div.overlay').css({
-        //     'opacity': '0',
-        //     'display': 'none',
-        // });
-        // $(this).children().children('.work-title').css('bottom', '-100%');
-        // for (var i = 0; i < children.length; i++) {
-        //     children[i].css('display', 'none');
-        // }
     });
 });
