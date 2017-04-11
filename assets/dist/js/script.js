@@ -16,22 +16,22 @@ $( document ).ready(function() {
 		indicatorTwo={
 			leftOffset: $("#nav2").offset().left,
 			width: $("#nav2").width(),
-			color: "#112A60"
+			color: "#1c1a1a"
 		},
 		indicatorThree={
 			leftOffset: $("#nav3").offset().left,
 			width: $("#nav3").width(),
-			color: "#7EC5AA"
+			color: "#3f0e0e"
 		},
 		indicatorFour={
 			leftOffset: $("#nav4").offset().left,
 			width: $("#nav4").width(),
-			color: "#FFC0A3"
+			color: "#9d0000"
 		},
 		indicatorFive={
 			leftOffset: $("#nav5").offset().left,
 			width: $("#nav5").width,
-			color: "#112A60"
+			color: "#303030"
 		};
 
 	// Set the css of #indicator here, so it shows up correct on load
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 		// This just kinda seems weird on mobile
 		// since the load progress bar is in same spot
 
-		console.log("fullScrollPosition: " + fullScrollPosition + "; totalHeight: " + totalHeight + "; percentScroll: " + percentScroll);
+		// console.log("fullScrollPosition: " + fullScrollPosition + "; totalHeight: " + totalHeight + "; percentScroll: " + percentScroll);
 
 		if (percentScroll <= 96) {
 			if (scrollPosition < slideTwo && scrollPosition > slideOne){
@@ -103,18 +103,38 @@ $( document ).ready(function() {
 			}
 		}
 	})
-});
-$(function() {
-	$('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500);
-        return false;
-      }
-    }
-  });
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 500);
+            return false;
+          }
+        }
+    });
+    $('.shot').mouseenter(function() {
+        // var siblings = $(this).children();
+        $(this).siblings().children('div.overlay').addClass('hovered');
+        $(this).children().children('.work-title').css('bottom', '0');
+        // $(this).children().children('.work-title').css('bottom', '0');
+        // for (var i = 0; i < children.length; i++) {
+        //     children[i].css('display', 'none');
+        // }
+    });
+    $('.shot').mouseleave(function() {
+        // var siblings = $(this).children();
+        $(this).siblings().children('div.overlay').removeClass('hovered');
+        $(this).children().children('.work-title').css('bottom', '-100%');
+        // $(this).siblings().children('div.overlay').css({
+        //     'opacity': '0',
+        //     'display': 'none',
+        // });
+        // $(this).children().children('.work-title').css('bottom', '-100%');
+        // for (var i = 0; i < children.length; i++) {
+        //     children[i].css('display', 'none');
+        // }
+    });
 });
