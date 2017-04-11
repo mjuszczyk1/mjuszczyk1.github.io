@@ -247,10 +247,25 @@ nav.navbar #nav4 a:hover {
 .slide#slide5 a {
   color: #FFF;
 }
-.slide#slide5 a:focus,
-.slide#slide5 a:active,
-.slide#slide5 a:hover {
-  color: #e6e6e6;
+.slide#slide5 a .fa-stack-2x {
+  color: #000;
+  transition: all .3s ease;
+}
+.slide#slide5 a:hover .fa-stack-2x {
+  color: #FFF;
+  transition: all .4s ease;
+}
+.slide#slide5 a:hover#facebook {
+  color: #3b5998;
+}
+.slide#slide5 a:hover#email {
+  color: #337ab7;
+}
+.slide#slide5 a:hover#linkedin {
+  color: #00a0dc;
+}
+.slide#slide5 a:hover#resume {
+  color: #18453b;
 }
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {

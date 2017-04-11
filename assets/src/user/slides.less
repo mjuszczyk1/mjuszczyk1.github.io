@@ -134,8 +134,29 @@
 		padding: 25px 0;
 		a {
 			color: @white;
-			&:focus, &:active, &:hover {
-				color: darken(@white, 10%)
+			.fa-stack-2x {
+				// display: none;
+				color: @color-one;
+				transition: all .3s ease;
+			}
+			&:hover {
+				.fa-stack-2x {
+					// display: inline-block;
+					color: @white;
+					transition: all .4s ease;
+				}
+				&#facebook {
+					color: @color-facebook;
+				}
+				&#email {
+					color: @color-email;
+				}
+				&#linkedin {
+					color: @color-linkedin;
+				}
+				&#resume {
+					color: @color-resume;
+				}
 			}
 		}
 	}
