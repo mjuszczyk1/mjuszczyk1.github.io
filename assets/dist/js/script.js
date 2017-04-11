@@ -96,7 +96,8 @@ $( document ).ready(function() {
 				$("#html-sk").css("width", "100%");
 		    	$("#css-sk").css("width", "100%");
 		    	$("#js-sk").css("width", "90%");
-		    	$("#twig-sk").css("width","80%");
+                $("#php-sk").css("width","80%");
+		    	$("#twig-sk").css("width","70%");
 		    	$("#grail-sk").css("width","50%");
 		    	$("#groov-sk").css("width","80%");
 		    	$("#c-sk").css("width","70%");
