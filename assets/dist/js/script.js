@@ -37,10 +37,9 @@ $( document ).ready(function() {
 	// Set the css of #indicator here, so it shows up correct on load
 	$("#indicator").css("left",indicatorOne.leftOffset).css("width",indicatorOne.width);
 
-	var mobileIndicator=$("#mobile-indicator");
-
 	var progressBars=false;
 
+    // scroll indicator
 	$(window).scroll(function(){
 		// Distance meseaured from top
 		var scrollPosition = window.scrollY;
@@ -72,9 +71,9 @@ $( document ).ready(function() {
 				if (scrollPosition > (slideThree * 1.4)){
 					$("#html-sk").css("width", "100%");
 			    	$("#css-sk").css("width", "100%");
-			    	$("#js-sk").css("width", "90%");
-                    $("#php-sk").css("width","80%");
-                    $("#twig-sk").css("width","70%");
+			    	$("#js-sk").css("width", "70%");
+                    $("#php-sk").css("width","65%");
+                    $("#twig-sk").css("width","80%");
 			    	$("#grail-sk").css("width","50%");
 			    	$("#groov-sk").css("width","80%");
 			    	$("#c-sk").css("width","70%");
@@ -95,16 +94,18 @@ $( document ).ready(function() {
 			if (!progressBars){
 				$("#html-sk").css("width", "100%");
 		    	$("#css-sk").css("width", "100%");
-		    	$("#js-sk").css("width", "90%");
-                $("#php-sk").css("width","80%");
-		    	$("#twig-sk").css("width","70%");
+		    	$("#js-sk").css("width", "70%");
+                $("#php-sk").css("width","65%");
+		    	$("#twig-sk").css("width","80%");
 		    	$("#grail-sk").css("width","50%");
 		    	$("#groov-sk").css("width","80%");
 		    	$("#c-sk").css("width","70%");
 				$("#pyth-sk").css("width","50%");
 			}
 		}
-	})
+	});
+
+    // smooth scrolling to anchors
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
@@ -117,6 +118,8 @@ $( document ).ready(function() {
           }
         }
     });
+
+    // work screenshot hovers
     $('.shot').mouseenter(function() {
         $(this).children('div.overlay').addClass('hovered');
         $(this).children().children('.work-title').css('bottom', '0');

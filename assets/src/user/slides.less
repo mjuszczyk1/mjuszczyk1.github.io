@@ -47,21 +47,18 @@
 	}
 	&#slide3 {
 		background: @color-three;
-		// padding-bottom: 25px;
 		display: table;
 		.screenshots {
-			// margin-bottom: 25px;
 			margin-left: -15px;
 			margin-right: -15px;
-			.col-sm-4 {
-				padding-left: 0;
-				padding-right: 0;
-			}
 			.shot {
 				width: 33.33333%;
 				float: left;
 				position: relative;
 				border: 1px solid rgba(0,0,0,0.7);
+				@media(max-width: @screen-xs-max) {
+					width: 50%;
+				}
 				.overlay {
 					position: absolute;
 					display: block;
@@ -85,14 +82,6 @@
 		}
 		.work-preview {
 			max-width: 100%;
-			// -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
-			// -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
-			// box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);;
-			// &:hover {
-			// 	-webkit-box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
-			// 	-moz-box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
-			// 	box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);;
-			// }
 		}
 		a {
 			color: @color-one;
@@ -115,7 +104,7 @@
 				background-color: rgba(0,0,0,0.5);
 				margin: 0;
 				display: block;
-				padding: 15px 0 15px 30px;
+				padding: 15px 30px 15px 30px;
 				color: @white;
 				font-weight: 700;
 				transition: bottom .4s ease;
@@ -125,8 +114,25 @@
 	&#slide4 {
 		padding: 25px 0;
 		background: @color-four;
-		.progress-bar {
-			background-color: @color-three;
+		.container {
+			position: relative;
+			h3.no-top-marg {
+				@media(max-width: @screen-xs-max) {
+					margin: 0;
+				}
+			}
+			.row p.visible-xs {
+				margin-bottom: 0;
+			}
+			.row.hidden-xs p {}
+		}
+		.progress {
+			@media(min-width: @screen-sm-min){
+				margin-bottom: 0;
+			}
+			.progress-bar {
+				background-color: @color-three;
+			}
 		}
 	}
 	&#slide5 {
@@ -135,13 +141,11 @@
 		a {
 			color: @white;
 			.fa-stack-2x {
-				// display: none;
 				color: @color-one;
 				transition: all .3s ease;
 			}
 			&:hover {
 				.fa-stack-2x {
-					// display: inline-block;
 					color: @white;
 					transition: all .4s ease;
 				}
