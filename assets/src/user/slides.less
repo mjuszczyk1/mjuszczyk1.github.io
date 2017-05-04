@@ -55,26 +55,31 @@
 				width: 33.33333%;
 				float: left;
 				position: relative;
-				border: 1px solid rgba(0,0,0,0.7);
-				@media(max-width: @screen-xs-max) {
-					width: 50%;
+				@media(min-width: @screen-sm-min) {
+					border: 1px solid rgba(0,0,0,0.7);
 				}
-				.overlay {
-					position: absolute;
-					display: block;
-					background: rgba(0,0,0,0.5);
-					transition: all .4s ease;
-					z-index: 1;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					&.hovered {
+				@media(max-width: @screen-xs-max) {
+					width: 100%;
+					padding: 15px 15px;
+				}
+				@media(min-width: @screen-sm-min) {
+					.overlay {
+						position: absolute;
+						display: block;
 						background: rgba(0,0,0,0.5);
 						transition: all .4s ease;
-						display: none;
-						position: initial;
 						z-index: 1;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						&.hovered {
+							background: rgba(0,0,0,0.5);
+							transition: all .4s ease;
+							display: none;
+							position: initial;
+							z-index: 1;
+						}
 					}
 				}
 			}
@@ -84,30 +89,36 @@
 			max-width: 100%;
 		}
 		a {
-			color: @color-one;
+			@media(min-width: @screen-sm-min) {
+				color: @color-one;
+				&:focus, &:active, &:hover {
+					color: darken(@color-one, 10%);
+				}
+			}
 			font-weight: 700;
 			position: relative;
 			display: block;
 			overflow: hidden;
 			&:focus, &:active, &:hover {
-				color: darken(@color-one, 10%);
 				.work-title {
 					bottom: 0;
 					transition: bottom .4s ease;
 				}
 			}
-			.work-title {
-				position: absolute;
-				bottom: -100%;
-				left: 0;
-				right: 0;
-				background-color: rgba(0,0,0,0.5);
-				margin: 0;
-				display: block;
-				padding: 15px 30px 15px 30px;
-				color: @white;
-				font-weight: 700;
-				transition: bottom .4s ease;
+			@media(min-width: @screen-sm-min) {
+				.work-title {
+					position: absolute;
+					bottom: -100%;
+					left: 0;
+					right: 0;
+					background-color: rgba(0,0,0,0.5);
+					margin: 0;
+					display: block;
+					padding: 15px 30px 15px 30px;
+					color: @white;
+					font-weight: 700;
+					transition: bottom .4s ease;
+				}
 			}
 		}
 	}

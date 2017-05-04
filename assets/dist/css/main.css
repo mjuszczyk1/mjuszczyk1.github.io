@@ -179,45 +179,56 @@ nav.navbar #nav4 a:hover {
   width: 33.33333%;
   float: left;
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 768px) {
+  .slide#slide3 .screenshots .shot {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+  }
 }
 @media (max-width: 767px) {
   .slide#slide3 .screenshots .shot {
-    width: 50%;
+    width: 100%;
+    padding: 15px 15px;
   }
 }
-.slide#slide3 .screenshots .shot .overlay {
-  position: absolute;
-  display: block;
-  background: rgba(0, 0, 0, 0.5);
-  transition: all .4s ease;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.slide#slide3 .screenshots .shot .overlay.hovered {
-  background: rgba(0, 0, 0, 0.5);
-  transition: all .4s ease;
-  display: none;
-  position: initial;
-  z-index: 1;
+@media (min-width: 768px) {
+  .slide#slide3 .screenshots .shot .overlay {
+    position: absolute;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all .4s ease;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .slide#slide3 .screenshots .shot .overlay.hovered {
+    background: rgba(0, 0, 0, 0.5);
+    transition: all .4s ease;
+    display: none;
+    position: initial;
+    z-index: 1;
+  }
 }
 .slide#slide3 .work-preview {
   max-width: 100%;
 }
 .slide#slide3 a {
-  color: #000;
   font-weight: 700;
   position: relative;
   display: block;
   overflow: hidden;
 }
-.slide#slide3 a:focus,
-.slide#slide3 a:active,
-.slide#slide3 a:hover {
-  color: #000000;
+@media (min-width: 768px) {
+  .slide#slide3 a {
+    color: #000;
+  }
+  .slide#slide3 a:focus,
+  .slide#slide3 a:active,
+  .slide#slide3 a:hover {
+    color: #000000;
+  }
 }
 .slide#slide3 a:focus .work-title,
 .slide#slide3 a:active .work-title,
@@ -225,18 +236,20 @@ nav.navbar #nav4 a:hover {
   bottom: 0;
   transition: bottom .4s ease;
 }
-.slide#slide3 a .work-title {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 0;
-  display: block;
-  padding: 15px 30px 15px 30px;
-  color: #FFF;
-  font-weight: 700;
-  transition: bottom .4s ease;
+@media (min-width: 768px) {
+  .slide#slide3 a .work-title {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    display: block;
+    padding: 15px 30px 15px 30px;
+    color: #FFF;
+    font-weight: 700;
+    transition: bottom .4s ease;
+  }
 }
 .slide#slide4 {
   padding: 25px 0;
