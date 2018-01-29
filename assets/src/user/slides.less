@@ -51,6 +51,20 @@
 		.screenshots {
 			margin-left: -15px;
 			margin-right: -15px;
+			.overlay {
+				display: none;
+				@media(min-width: @screen-sm-min) {
+					position: absolute;
+					display: block;
+					background: rgba(0,0,0,0.5);
+					transition: all .4s ease;
+					z-index: 1;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+			}
 			.shot {
 				width: 33.33333%;
 				float: left;
@@ -62,24 +76,13 @@
 					width: 100%;
 					padding: 15px 15px;
 				}
-				@media(min-width: @screen-sm-min) {
+				&:hover {
 					.overlay {
-						position: absolute;
-						display: block;
 						background: rgba(0,0,0,0.5);
 						transition: all .4s ease;
+						display: none;
+						position: initial;
 						z-index: 1;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						&.hovered {
-							background: rgba(0,0,0,0.5);
-							transition: all .4s ease;
-							display: none;
-							position: initial;
-							z-index: 1;
-						}
 					}
 				}
 			}

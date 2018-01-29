@@ -1,5 +1,5 @@
 // Navbar indicator slider
-$( document ).ready(function() {
+$( window ).load(function() {
 	// Set offsets of slides
 	var navHeight=$("nav.navbar").height();
 	var slideOne=$(".slide#slide1").offset().top - navHeight,
@@ -30,10 +30,9 @@ $( document ).ready(function() {
 		},
 		indicatorFive={
 			leftOffset: $("#nav5").offset().left,
-			width: $("#nav5").width,
+			width: $("#nav5").width(),
 			color: "#303030"
 		};
-
 	// Set the css of #indicator here, so it shows up correct on load
 	$("#indicator").css("left",indicatorOne.leftOffset).css("width",indicatorOne.width);
 
@@ -117,15 +116,5 @@ $( document ).ready(function() {
             return false;
           }
         }
-    });
-
-    // work screenshot hovers
-    $('.shot').mouseenter(function() {
-        $(this).children('div.overlay').addClass('hovered');
-        $(this).children().children('.work-title').css('bottom', '0');
-    });
-    $('.shot').mouseleave(function() {
-        $(this).children('div.overlay').removeClass('hovered');
-        $(this).children().children('.work-title').css('bottom', '-100%');
     });
 });
