@@ -3003,6 +3003,9 @@ a.shape-link:hover {
   background: #000;
   z-index: 999;
 }
+nav.navbar {
+  border-bottom: 0;
+}
 nav.navbar a {
   font-weight: 700;
 }
