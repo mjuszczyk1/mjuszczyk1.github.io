@@ -3194,8 +3194,13 @@ nav.navbar #nav4:focus {
 .slide#slide4 .container {
   position: relative;
 }
+@media (min-width: 768px) {
+  .slide#slide4 .container h3 {
+    text-align: right;
+  }
+}
 @media (max-width: 767px) {
-  .slide#slide4 .container h3.no-top-marg {
+  .slide#slide4 .container h3 {
     margin: 0;
   }
 }

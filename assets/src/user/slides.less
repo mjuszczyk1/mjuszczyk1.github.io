@@ -131,7 +131,10 @@
 		background: @color-three;
 		.container {
 			position: relative;
-			h3.no-top-marg {
+			h3 {
+				@media(min-width: @screen-sm-min) {
+					text-align: right;
+				}
 				@media(max-width: @screen-xs-max) {
 					margin: 0;
 				}
