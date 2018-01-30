@@ -11,28 +11,29 @@ $(window).load(function() {
     var indicatorOne = {
             leftOffset: $("#nav1").offset().left,
             width: $("#nav1").width(),
-            color: "#FFF"
+            color: 'rgb(255,255,255)'
         },
         indicatorTwo = {
             leftOffset: $("#nav2").offset().left,
             width: $("#nav2").width(),
-            color: "#1c1a1a"
+            color: $(".square.color-one").css('backgroundColor')
         },
         indicatorThree = {
             leftOffset: $("#nav3").offset().left,
             width: $("#nav3").width(),
-            color: "#3f0e0e"
+            color: $(".square.color-two").css('backgroundColor')
         },
         indicatorFour = {
             leftOffset: $("#nav4").offset().left,
             width: $("#nav4").width(),
-            color: "#9d0000"
+            color: $(".square.color-three").css('backgroundColor')
         },
         indicatorFive = {
             leftOffset: $("#nav5").offset().left,
             width: $("#nav5").width(),
-            color: "#303030"
+            color: $(".square.color-four").css('backgroundColor')
         };
+
     // Set the css of #indicator here, so it shows up correct on load
     $("#indicator").css("left", indicatorOne.leftOffset).css("width", indicatorOne.width);
 
