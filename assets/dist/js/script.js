@@ -66,15 +66,7 @@ $(window).load(function() {
                     .css("width", indicatorThree.width)
                     .css("background-color", indicatorThree.color);
                 if (scrollPosition > (slideThree * 1.4)) {
-                    $("#html-sk").css("width", "100%");
-                    $("#css-sk").css("width", "100%");
-                    $("#js-sk").css("width", "70%");
-                    $("#php-sk").css("width", "65%");
-                    $("#twig-sk").css("width", "80%");
-                    $("#grail-sk").css("width", "50%");
-                    $("#groov-sk").css("width", "80%");
-                    $("#c-sk").css("width", "70%");
-                    $("#pyth-sk").css("width", "50%");
+                    $("#slide4").addClass('show-progress');
                     progressBars = true;
                 }
             } else if (scrollPosition < slideFive && scrollPosition > slideFour) {
@@ -87,15 +79,7 @@ $(window).load(function() {
                 .css("width", indicatorFive.width)
                 .css("background-color", indicatorFive.color);
             if (!progressBars) {
-                $("#html-sk").css("width", "100%");
-                $("#css-sk").css("width", "100%");
-                $("#js-sk").css("width", "70%");
-                $("#php-sk").css("width", "65%");
-                $("#twig-sk").css("width", "80%");
-                $("#grail-sk").css("width", "50%");
-                $("#groov-sk").css("width", "80%");
-                $("#c-sk").css("width", "70%");
-                $("#pyth-sk").css("width", "50%");
+                $("#slide4").addClass('show-progress');
             }
         }
     });

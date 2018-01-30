@@ -3010,13 +3010,21 @@ nav.navbar a {
   font-weight: 700;
 }
 nav.navbar #nav2 a:hover,
-nav.navbar #nav5 a:hover {
+nav.navbar #nav5 a:hover,
+nav.navbar #nav2 a:active,
+nav.navbar #nav5 a:active,
+nav.navbar #nav2:focus,
+nav.navbar #nav5:focus {
   color: #1c1a1a;
 }
-nav.navbar #nav3 a:hover {
+nav.navbar #nav3 a:hover,
+nav.navbar #nav3 a:active,
+nav.navbar #nav3:focus {
   color: #3f0e0e;
 }
-nav.navbar #nav4 a:hover {
+nav.navbar #nav4 a:hover,
+nav.navbar #nav4 a:active,
+nav.navbar #nav4:focus {
   color: #9d0000;
 }
 .no-marg {
@@ -3197,6 +3205,34 @@ nav.navbar #nav4 a:hover {
 }
 .slide#slide4 .progress .progress-bar {
   background-color: #3f0e0e;
+  width: 0;
+}
+.slide#slide4.show-progress .progress .progress-bar#html-sk {
+  width: 100%;
+}
+.slide#slide4.show-progress .progress .progress-bar#css-sk {
+  width: 100%;
+}
+.slide#slide4.show-progress .progress .progress-bar#twig-sk {
+  width: 80%;
+}
+.slide#slide4.show-progress .progress .progress-bar#js-sk {
+  width: 70%;
+}
+.slide#slide4.show-progress .progress .progress-bar#php-sk {
+  width: 65%;
+}
+.slide#slide4.show-progress .progress .progress-bar#grail-sk {
+  width: 50%;
+}
+.slide#slide4.show-progress .progress .progress-bar#groov-sk {
+  width: 80%;
+}
+.slide#slide4.show-progress .progress .progress-bar#c-sk {
+  width: 79%;
+}
+.slide#slide4.show-progress .progress .progress-bar#pyth-sk {
+  width: 50%;
 }
 .slide#slide5 {
   background: #000;
