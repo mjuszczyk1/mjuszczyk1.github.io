@@ -15,6 +15,7 @@ a.shape-link {
 	.triangle {
 		border-left: 55px solid transparent;
 		border-right: 55px solid transparent;
+		border-bottom: 55px solid;
 		width: 0;
 		margin: 0 auto;
 		&.flipped {
@@ -22,14 +23,17 @@ a.shape-link {
 			-ms-transform: rotate(180deg);
 			transform: rotate(180deg);
 		}
-		&.color-blue {
-			border-bottom: 55px solid @color-two;
+		&.color-one {
+			border-bottom-color: @color-one;
 		}
-		&.color-green {
-			border-bottom: 55px solid @color-three;
+		&.color-two {
+			border-bottom-color: @color-two;
 		}
-		&.color-pink {
-			border-bottom: 55px solid @color-four;
+		&.color-three {
+			border-bottom-color: @color-three;
+		}
+		&.color-four {
+			border-bottom-color: @color-four;
 		}
 	}
 	.square {
@@ -41,13 +45,16 @@ a.shape-link {
 		h1 {
 			margin: 0 0 0 45px;
 		}
-		&.color-blue {
+		&.color-one {
+			background-color: @color-one;
+		}
+		&.color-two {
 			background-color: @color-two;
 		}
-		&.color-green {
+		&.color-three {
 			background-color: @color-three;
 		}
-		&.color-pink {
+		&.color-four {
 			background-color: @color-four;
 		}
 	}

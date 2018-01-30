@@ -15,8 +15,9 @@
 		background-image: url('../img/testing.png');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position-y: 33%;
+		background-position-y: 45%;
 		background-attachment: fixed;
+		// background-color: @color-one;
 		min-height: 80vh;
 		position: relative;
 		@media (max-width: @screen-sm-max){
@@ -34,7 +35,7 @@
 		}
 	}
 	&#slide2 {
-		background: @color-two;
+		background: @color-one;
 		padding: 25px 0;
 		img {
 			width: 100%;
@@ -46,7 +47,7 @@
 		}
 	}
 	&#slide3 {
-		background: @color-three;
+		background: @color-two;
 		display: table;
 		.screenshots {
 			margin-left: -15px;
@@ -127,7 +128,7 @@
 	}
 	&#slide4 {
 		padding: 25px 0;
-		background: @color-four;
+		background: @color-three;
 		.container {
 			position: relative;
 			h3.no-top-marg {
@@ -145,13 +146,12 @@
 				margin-bottom: 0;
 			}
 			.progress-bar {
-				background-color: @color-three;
+				background-color: @color-one;
 				width: 0;
 			}
 		}
 		&.show-progress {
-			.progress {
-				.progress-bar {
+			.progress-bar {
 			 	&#html-sk {
 					width: 100%;
 				}
@@ -179,17 +179,19 @@
 				&#pyth-sk {
 					width: 50%;
 				}
-			 }
+				&#sf-sk {
+					width: 50%;
+				}
 			}
 		}
 	}
 	&#slide5 {
-		background: @color-one;
+		background: @color-four;
 		padding: 25px 0;
 		a {
 			color: @white;
 			.fa-stack-2x {
-				color: @color-one;
+				color: transparent;
 				transition: all .3s ease;
 			}
 			&:hover {

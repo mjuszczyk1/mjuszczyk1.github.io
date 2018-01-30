@@ -2938,6 +2938,7 @@ a.shape-link {
 a.shape-link .triangle {
   border-left: 55px solid transparent;
   border-right: 55px solid transparent;
+  border-bottom: 55px solid;
   width: 0;
   margin: 0 auto;
 }
@@ -2946,14 +2947,17 @@ a.shape-link .triangle.flipped {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-a.shape-link .triangle.color-blue {
-  border-bottom: 55px solid #1c1a1a;
+a.shape-link .triangle.color-one {
+  border-bottom-color: #1D2A16;
 }
-a.shape-link .triangle.color-green {
-  border-bottom: 55px solid #3f0e0e;
+a.shape-link .triangle.color-two {
+  border-bottom-color: #B2B0A3;
 }
-a.shape-link .triangle.color-pink {
-  border-bottom: 55px solid #9d0000;
+a.shape-link .triangle.color-three {
+  border-bottom-color: #5B844A;
+}
+a.shape-link .triangle.color-four {
+  border-bottom-color: #9C5434;
 }
 a.shape-link .square {
   margin: 0 auto;
@@ -2965,14 +2969,17 @@ a.shape-link .square {
 a.shape-link .square h1 {
   margin: 0 0 0 45px;
 }
-a.shape-link .square.color-blue {
-  background-color: #1c1a1a;
+a.shape-link .square.color-one {
+  background-color: #1D2A16;
 }
-a.shape-link .square.color-green {
-  background-color: #3f0e0e;
+a.shape-link .square.color-two {
+  background-color: #B2B0A3;
 }
-a.shape-link .square.color-pink {
-  background-color: #9d0000;
+a.shape-link .square.color-three {
+  background-color: #5B844A;
+}
+a.shape-link .square.color-four {
+  background-color: #9C5434;
 }
 a.shape-link:hover {
   text-decoration: none;
@@ -3003,9 +3010,6 @@ a.shape-link:hover {
   background: #000;
   z-index: 999;
 }
-nav.navbar {
-  border-bottom: 0;
-}
 nav.navbar a {
   font-weight: 700;
 }
@@ -3015,17 +3019,17 @@ nav.navbar #nav2 a:active,
 nav.navbar #nav5 a:active,
 nav.navbar #nav2:focus,
 nav.navbar #nav5:focus {
-  color: #1c1a1a;
+  color: #B2B0A3;
 }
 nav.navbar #nav3 a:hover,
 nav.navbar #nav3 a:active,
 nav.navbar #nav3:focus {
-  color: #3f0e0e;
+  color: #5B844A;
 }
 nav.navbar #nav4 a:hover,
 nav.navbar #nav4 a:active,
 nav.navbar #nav4:focus {
-  color: #9d0000;
+  color: #9C5434;
 }
 .no-marg {
   margin: 0;
@@ -3060,7 +3064,7 @@ nav.navbar #nav4:focus {
   background-image: url('../img/testing.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 33%;
+  background-position-y: 45%;
   background-attachment: fixed;
   min-height: 80vh;
   position: relative;
@@ -3083,7 +3087,7 @@ nav.navbar #nav4:focus {
   }
 }
 .slide#slide2 {
-  background: #1c1a1a;
+  background: #1D2A16;
   padding: 25px 0;
 }
 .slide#slide2 img {
@@ -3097,7 +3101,7 @@ nav.navbar #nav4:focus {
   }
 }
 .slide#slide3 {
-  background: #3f0e0e;
+  background: #B2B0A3;
   display: table;
 }
 .slide#slide3 .screenshots {
@@ -3154,12 +3158,12 @@ nav.navbar #nav4:focus {
 }
 @media (min-width: 768px) {
   .slide#slide3 a {
-    color: #000;
+    color: #1D2A16;
   }
   .slide#slide3 a:focus,
   .slide#slide3 a:active,
   .slide#slide3 a:hover {
-    color: #000000;
+    color: #060904;
   }
 }
 .slide#slide3 a:focus .work-title,
@@ -3185,7 +3189,7 @@ nav.navbar #nav4:focus {
 }
 .slide#slide4 {
   padding: 25px 0;
-  background: #9d0000;
+  background: #5B844A;
 }
 .slide#slide4 .container {
   position: relative;
@@ -3204,45 +3208,48 @@ nav.navbar #nav4:focus {
   }
 }
 .slide#slide4 .progress .progress-bar {
-  background-color: #3f0e0e;
+  background-color: #1D2A16;
   width: 0;
 }
-.slide#slide4.show-progress .progress .progress-bar#html-sk {
+.slide#slide4.show-progress .progress-bar#html-sk {
   width: 100%;
 }
-.slide#slide4.show-progress .progress .progress-bar#css-sk {
+.slide#slide4.show-progress .progress-bar#css-sk {
   width: 100%;
 }
-.slide#slide4.show-progress .progress .progress-bar#twig-sk {
+.slide#slide4.show-progress .progress-bar#twig-sk {
   width: 80%;
 }
-.slide#slide4.show-progress .progress .progress-bar#js-sk {
+.slide#slide4.show-progress .progress-bar#js-sk {
   width: 70%;
 }
-.slide#slide4.show-progress .progress .progress-bar#php-sk {
+.slide#slide4.show-progress .progress-bar#php-sk {
   width: 65%;
 }
-.slide#slide4.show-progress .progress .progress-bar#grail-sk {
+.slide#slide4.show-progress .progress-bar#grail-sk {
   width: 50%;
 }
-.slide#slide4.show-progress .progress .progress-bar#groov-sk {
+.slide#slide4.show-progress .progress-bar#groov-sk {
   width: 80%;
 }
-.slide#slide4.show-progress .progress .progress-bar#c-sk {
+.slide#slide4.show-progress .progress-bar#c-sk {
   width: 79%;
 }
-.slide#slide4.show-progress .progress .progress-bar#pyth-sk {
+.slide#slide4.show-progress .progress-bar#pyth-sk {
+  width: 50%;
+}
+.slide#slide4.show-progress .progress-bar#sf-sk {
   width: 50%;
 }
 .slide#slide5 {
-  background: #000;
+  background: #9C5434;
   padding: 25px 0;
 }
 .slide#slide5 a {
   color: #FFF;
 }
 .slide#slide5 a .fa-stack-2x {
-  color: #000;
+  color: transparent;
   transition: all .3s ease;
 }
 .slide#slide5 a:hover .fa-stack-2x {
